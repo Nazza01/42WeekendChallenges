@@ -24,13 +24,13 @@ int main()
         }
         else                                        // If the input is a number, start the game!
         {
-            printf("Lets generate a random number between 1 - %i\n", N);
+            printf("Lets generate a random number between 1 - %i", N);
             int ans = 1+rand() % N;                   // Generate random number between (+1 as it would use 0 in the guess check) and upper limit  
-
+            printf("\nChecking :");
             for (int i =0; i < 19; i++)
             {
-                printf("\rGenerating... %d", Bar[i]);
-                sleep(1);
+                sleep(1);                            // Sleep for the loading effect
+                printf("\r%c", Bar[i]);               //
                 fflush(stdout);                       // Flush the standard output as it's being buffered and stored
             }
             /*
