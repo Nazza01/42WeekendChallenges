@@ -5,8 +5,9 @@
 
 
 # Check if the C program will compile and throw an error if it doensnt run
-if gcc stage2.c -o stage2; then
-    echo "Thankyou :)"
+if gcc stage2.c -o stage2.out; then
+    ./stage2.out
+    echo "You win!! Congratulations :D"
 else
-    echo "Failed to compile! :("
+    echo "Sorry, something went wrong. Please contact me!"
 fi

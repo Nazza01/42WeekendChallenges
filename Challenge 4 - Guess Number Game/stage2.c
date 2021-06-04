@@ -22,23 +22,20 @@ int main()
         }
         else                                        // If the input is a number, start the game!
         {
-            printf("Lets generate a random number between 1 - %i", N);
-            int ans = 1+rand() % N;                 // Generate random number between (+1 as it would use 0 in the guess check) and upper limit  
-            printf("\nChecking");
-            sleep(2);
+            printf("Generating a random number between 1 - %i", N);
+            ans = 1+rand() % N;                 // Generate random number between (+1 as it would use 0 in the guess check) and upper limit  
+            printf("\nChecking"); sleep(2);
             printf("\nPlease guess the number!\n");
             scanf("%i", &guess);                    // Let the player guess the number
             while ( guess != ans )
             {
-
+                printf("Checking..\n"); sleep(2);
                 printf("Please guess again!\n");
                 scanf("%i", &guess);
-                printf("Checking..\n");
-                sleep(1);
             }
             printf("Checking..\n");
             sleep(2);
-            printf("Well Done! You have guessed correctly!");
+            printf("Well Done! You have guessed correctly!\n");
         }
     }
     return 0;
